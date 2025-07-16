@@ -4,8 +4,9 @@ import time
 import datetime
 
 def fuzz_protocol(protocol):
-    ip = "Your_IP" 
-    ports = {
+    ip = "Your_IP"  # Your Device IP
+    # Adjust to meet your device
+    ports = {        
         'rtsp': 554,
         'tls': 443,
         'http': 8080
@@ -28,7 +29,7 @@ def fuzz_protocol(protocol):
             connection=connection
         ),
         db_filename=db_filename,  # 正確設置 db_filename
-        sleep_time=0.288,  # 控制测试用例之间的间隔
+        sleep_time=0.288,  # 控制測試用例之间的间隔
     )  
 
 
@@ -71,7 +72,7 @@ def fuzz_protocol(protocol):
                 s_static("\r\n", name="Request-Line-CRLF")
                 s_string("Host:", name="Host Header")
                 s_delim(" ", name="space-3")
-                s_string("YOUR_IP_ADDRESS", name="Host IP")
+                s_string("127.0.0.1", name="Host IP")
                 s_static("\r\n\r\n", name="End Headers")
                 
         session.connect(s_get(f"{protocol}_Request_{i}"))
