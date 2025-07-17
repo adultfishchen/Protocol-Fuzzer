@@ -23,7 +23,7 @@ Installation guide:
 1. Clone this repository:
    ```
    git clone https://github.com/adultfishchen/ProtocolFuzzer.git
-   cd protocol-fuzzer
+   cd ProtocolFuzzer
    ```
 2. Modify the target configuration (IP, credentials, etc.) in the Python file.
 
