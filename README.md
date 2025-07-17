@@ -1,4 +1,4 @@
-# Protocol-Fuzzer
+# Protocol Fuzzer
 
 This is a protocol fuzzing framework built for testing custom network protocols.
 
